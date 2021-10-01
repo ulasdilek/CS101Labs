@@ -10,6 +10,10 @@
  */
  
 public class Lab01_Q1
+
+
+
+////henlo :)
 {      
    public static void main( String args[])
    {
@@ -19,7 +23,7 @@ public class Lab01_Q1
       final double GRADE_PERCENT_PER_LAB = LABS_GRADE_PERCENT / LABS_COUNT;
       
       // Variables
-      String courseAndSemesterasfsfsadsaf;     
+      String courseAndSemester;     
       
       /* This program prints information about the labs
          and grading policy */
