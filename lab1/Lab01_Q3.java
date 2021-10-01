@@ -8,7 +8,7 @@ public class Lab01_Q3 {
     public static void main( String[] args){
 
         //declaration and initialization of the constants
-        final int TOTAL_AREA_OF_THE_WORLD = 510072000;
+        final int TOTAL_AREA_OF_THE_WORLD = 510072000; //usage of long would be redundant since this value is smaller than Integer.MAXVALUE: 2147483647
         final double PERCENTAGE_OF_TURKEYS_AREA = 0.1536;
 
         //declaration and initialization of the dynamic values
@@ -26,9 +26,19 @@ public class Lab01_Q3 {
         System.out.println( "Turkey has " + dryLandInTurkey + " km2 dry land and " + waterInTurkey + " km2 water.");
         
         //What percent of the whole dry land of earth is in Turkey?
+        /**
+         * @redundant
+         * impractical variable declaration
+         */
+        double percentageOfTurkeysDryLandInRelationToTheWorld = 100 * (double) dryLandInTurkey / dryLandInTheWorld;
         System.out.println( "Turkey has " + ( 100 * (double) dryLandInTurkey / dryLandInTheWorld) + " percent of the Earth's dry land.");
         
         //What percent of all water is in Turkey?
+        /**
+         * @redundant
+         * impractical variable declaration
+         */
+        double percentageOfTurkeysWaterInRelationToTheWorld = 100 * (double) waterInTurkey / waterInTheWorld;
         System.out.println( "Turkey has " + ( 100 * (double) waterInTurkey / waterInTheWorld) + " percent of the Earth's water.");
         
     }
