@@ -12,7 +12,7 @@ public class Lab01_Q2 {
         double expression2 = (( 73.5 * 16.4 - Math.pow( 3, 6)) / ( 34 + Math.pow( 2, 5)) );
         double expression3 = Math.pow( 1.2 + 0.8, - 1.0 / 3.0);
 
-        //The reuslts are printed out
+        //The results are printed out
         System.out.println( "Result of the expression 1 is: " + expression1);
         System.out.println( "Result of the expression 2 is: " + expression2);
         System.out.println( "Result of the expression 3 is: " + expression3);
