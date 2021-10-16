@@ -4,6 +4,8 @@
  * @author Ulas Dilek
  */
 
+package lab2;
+
 import java.util.Scanner;
 
 public class Lab02_Q1

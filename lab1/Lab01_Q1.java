@@ -8,6 +8,8 @@
 /**
  * All errors of this program have been fixed by Ulas Dilek
  */
+
+ package lab1;
  
 public class Lab01_Q1
 

@@ -3,6 +3,8 @@
  * @author Ulas Dilek
  */
 
+package lab1;
+
 public class Lab01_Q3 {
 
     public static void main( String[] args){
