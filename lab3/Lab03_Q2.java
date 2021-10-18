@@ -37,6 +37,7 @@ public class Lab03_Q2 {
         else{
             isLeapYear = false;
         }
+        
         String leapYear = "not a leap year.";
         if (isLeapYear){
             leapYear = "a leap year.";
@@ -45,13 +46,27 @@ public class Lab03_Q2 {
         //minus 1 is for the inclusion of x00 years
         int century = (year - 1) / 100 + 1;
         String ordinal;
+        //checking the last digit of the century
+        if (century % 10 == 1){
+            ordinal = "st";
+        }
+        else if (century % 10 == 2){
+            ordinal = "nd";
+        }
+        else if (century % 10 == 3){
+            ordinal = "rd";
+        }
+        else {
+            ordinal = "th";
+        }
+        /*
         switch (century % 10){
             case (1): ordinal = "st"; break;
             case (2): ordinal = "nd"; break;
             case (3): ordinal = "rd"; break;
             default: ordinal = "th";
         }
-
+        */
         System.out.printf("%s%d%s%s%s%s%s", "So the year is ", year, " and we are in the ", century, ordinal, " century? That's ", leapYear);
         
     }
