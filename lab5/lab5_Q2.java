@@ -18,6 +18,8 @@ public class lab5_Q2 {
         String deck = "";
         String player = "";
         String dealer = "";
+        String tempString1 = "";
+        String tempString2 = "";
         int playerScore;
         int dealerScore;
         Scanner in = new Scanner(System.in);
@@ -35,18 +37,33 @@ public class lab5_Q2 {
         for (byte counter = 0; counter < 2; counter++) {
             int cardIndex = random.nextInt(deck.length());
             player += String.valueOf(deck.charAt(cardIndex));
-            deck = deck.replaceFirst(Character.toString(deck.charAt(cardIndex)), "");
+
+            //removing the card from the deck
+            tempString1 = deck.substring(0, cardIndex);
+            if (cardIndex < deck.length()) {
+                tempString2 = deck.substring(cardIndex + 1);
+            }
+            deck = tempString1 + tempString2;
+
+            //replace is forbidden
+            //deck = deck.replaceFirst(Character.toString(deck.charAt(cardIndex)), "");
         }
         for (byte counter = 0; counter < 2; counter++) {
             int cardIndex = random.nextInt(deck.length());
             dealer += String.valueOf(deck.charAt(cardIndex));
-            deck = deck.replaceFirst(Character.toString(deck.charAt(cardIndex)), "");
+
+            //removing the card from the deck
+            tempString1 = deck.substring(0, cardIndex);
+            if (cardIndex < deck.length()) {
+                tempString2 = deck.substring(cardIndex + 1);
+            }
+            deck = tempString1 + tempString2;
         }
         System.out.println("Dealer is now dealing cards...");
         System.out.println("Player's hand:");
         System.out.println(player);
         System.out.println("Dealer's hand:");
-        System.out.println(dealer.charAt(0) + "?");//revise
+        System.out.println(dealer.charAt(0) + "?");
         
 
         /*
@@ -66,12 +83,20 @@ public class lab5_Q2 {
                 System.out.println("Hit! Dealer is giving the player a card...");
                 int cardIndex = random.nextInt(deck.length());
                 player += String.valueOf(deck.charAt(cardIndex));
-                deck = deck.replaceFirst(Character.toString(deck.charAt(cardIndex)), "");
+
+                //removing the card from the deck
+                tempString1 = deck.substring(0, cardIndex);
+                if (cardIndex < deck.length()) {
+                    tempString2 = deck.substring(cardIndex + 1);
+                }
+                deck = tempString1 + tempString2;
+
                 System.out.println("Player's hand:");
                 System.out.println(player);
 
                 for (byte index = 0; index < player.length(); index++){
-                    playerScore += Integer.parseInt(Character.toString(player.charAt(index)));
+                    playerScore += Character.digit(player.charAt(index), 10);
+                    //playerScore += Integer.parseInt(Character.toString(player.charAt(index)));
                 }
 
                 if (playerScore == 21) {
@@ -89,7 +114,8 @@ public class lab5_Q2 {
             else {
 
                 for (byte index = 0; index < player.length(); index++){
-                    playerScore += Integer.parseInt(Character.toString(player.charAt(index)));
+                    playerScore += Character.digit(player.charAt(index), 10);
+                    //playerScore += Integer.parseInt(Character.toString(player.charAt(index)));
                 }
                 System.out.println("Stand! Player's turn is now over. Player's hand sums to " + playerScore);
                 playerTurn = false;
@@ -102,7 +128,7 @@ public class lab5_Q2 {
          * Dealer hit or stand
          * Make decisions and end the game
          */
-        for (; gameOn;){
+        if (gameOn){
 
             System.out.println("Dealer is drawing cards...");
             do {
@@ -110,12 +136,20 @@ public class lab5_Q2 {
                 dealerScore = 0;
                 int cardIndex = random.nextInt(deck.length());
                 dealer += String.valueOf(deck.charAt(cardIndex));
-                deck = deck.replaceFirst(Character.toString(deck.charAt(cardIndex)), "");
+                
+                //removing the card from the deck
+                tempString1 = deck.substring(0, cardIndex);
+                if (cardIndex < deck.length()) {
+                    tempString2 = deck.substring(cardIndex + 1);
+                }
+                deck = tempString1 + tempString2;
+                    
                 System.out.println("Dealer's hand:");
                 System.out.println(dealer);
 
                 for (byte index = 0; index < dealer.length(); index++){
-                    dealerScore += Integer.parseInt(Character.toString(dealer.charAt(index)));
+                    dealerScore += Character.digit(dealer.charAt(index), 10);
+                    //dealerScore += Integer.parseInt(Character.toString(dealer.charAt(index)));
                 }
 
                 if (dealerScore == 21) {

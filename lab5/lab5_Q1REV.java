@@ -2,16 +2,16 @@ package lab5;
 
 /**
  * This is a program that builds a city out of "*"
+ * This one even has DOUBLE DELUXE TM!!!!
  * @author Ulas Dilek
  */
 
 import java.util.Scanner;
 
-public class lab5_Q1{
+public class lab5_Q1REV{
     public static void main(String[] args) {
 
-        //bytes are used for memory efficiency
-        final byte ASCII_OFFSET_OF_NUMBERS = 48;
+        //final byte ASCII_OFFSET_OF_NUMBERS = 48;
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter city plan string:\t");
         String input = in.next();
@@ -19,10 +19,14 @@ public class lab5_Q1{
         System.out.println("City blueprint:");
         byte maxHeight = 0;
         int length = input.length();
+        byte currentHeight = 0;
         //find the maximum height for the buildings to determine how many spaces there will be
         for (int i = 0; i < length; i++) {
 
-            byte currentHeight = (byte) (input.charAt(i) - ASCII_OFFSET_OF_NUMBERS);
+            
+            if (input.charAt(i) != 'D') {
+                currentHeight = (byte) Character.digit(input.charAt(i), 10);
+            }
             if (currentHeight > maxHeight) {
                 maxHeight = currentHeight;
             }
@@ -31,11 +35,10 @@ public class lab5_Q1{
 
         char print;
         for (byte line = maxHeight; line > 0; line--) {// iterates through each line
-            for (int digit = 0; digit < length; digit++) {// iterates through each character of the input
-
-                //print = ( line > (byte) (input.charAt(digit) - ASCII_OFFSET_OF_NUMBERS) ? ' ' : '*' );
+            for (int column = 0; column < length; column++) {// iterates through each character of the input
+                currentHeight = (input.charAt(column) == 'D' ? (byte) Character.digit(input.charAt(column + 1), 10) : (byte) Character.digit(input.charAt(column), 10));
                 print = '*';
-                if (line > (byte) (input.charAt(digit) - ASCII_OFFSET_OF_NUMBERS)){
+                if (line > currentHeight){
                     print = ' ';
                 }
                 System.out.print(print);
