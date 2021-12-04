@@ -1,3 +1,5 @@
+// they did not allow me to use arrays on any part :(
+
 package lab7;
 
 public class PlayerLAB {
