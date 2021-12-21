@@ -10,6 +10,6 @@ Javadoc is available for packages listed [here](https://htmlpreview.github.io/?h
 
 ***Have a nice day!!!***
 
-![doru](https://user-images.githubusercontent.com/91346067/146985585-59e4023c-e717-41ec-bf0e-4073d78cef3c.png#gh-light-mode-only)![doruDark](https://user-images.githubusercontent.com/91346067/146986137-a9e5e479-e917-47bc-957e-3ad2f8267ba3.png#gh-dark-mode-only)
+![doru](https://user-images.githubusercontent.com/91346067/146987214-deb9d78d-5a61-42e9-9505-720361232255.png#gh-light-mode-only)![doruDark](https://user-images.githubusercontent.com/91346067/146987215-7ed34029-44dd-4893-9859-7055e37825c7.png#gh-dark-mode-only)
 
 @ulasdilek
