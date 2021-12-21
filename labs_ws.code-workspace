@@ -4,5 +4,8 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"javadoc-tools.generateJavadoc.targetFolder": ".\\out\\javadoc",
+		"javadoc-tools.generateJavadoc.workspaceSourceFolder": "."
+	}
 }
