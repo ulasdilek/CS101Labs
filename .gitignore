@@ -1,4 +1,5 @@
 /shelf/
-/out
+/out/*
+!/out/javadoc
 /.idea
 /labs.iml
